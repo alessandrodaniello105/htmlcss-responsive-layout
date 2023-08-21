@@ -185,13 +185,16 @@ footer .container {
 .planning .row .col:last-child .card {
   background-color: white;
   border-radius: 50px;
-
 }
 
 
 /**********
   TESTIMONIALS
 **********/
+
+.testimonials > .container > .row {
+  padding: 0 10px;
+}
 
 .testimonials .card {
   background-color: var(--violet);
@@ -241,7 +244,7 @@ footer .container {
 **********/
 
 .about-us .row {
-  padding: 0 1rem;
+  padding: 0 10px;
 }
 
 .about-us .col.text-box,
@@ -344,7 +347,7 @@ footer .container .col {
   }
 
   .container {
-    max-width: 1400px;
+    max-width: 1140px;
   }
 
   .planning .container {
