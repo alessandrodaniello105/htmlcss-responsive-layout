@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+h2.special {
+  font-size: 3rem;
+  color: goldenrod;
+}
 
 /**********
   UTILITY
@@ -41,7 +45,7 @@
 }
 
 .container {
-  max-width: 95%;
+  width: 95%;
   margin: 0 auto;
 }
 
@@ -63,7 +67,9 @@ header .col {
 .presentation,
 .planning,
 .testimonials,
-.benefits {
+.benefits,
+.about-us,
+.get-started {
   padding: 50px 0;
 }
 
@@ -106,19 +112,18 @@ main .presentation .row > .col:first-child .col.text-box {
   width: 70%;
 }
 
-.col.img-box {
+main .testimonials .col.img-box {
   width: 200px;
   flex-shrink: 0;
 }
 
-.col.text-box {
+main .testimonials .col.text-box {
   flex-grow: 1;
 }
 
-/**********
-  TESTIMONIALS
-**********/
-.testimonials{
+
+.testimonials,
+.get-started {
   text-align: center;
 }
 
@@ -135,6 +140,29 @@ main .presentation .row > .col:first-child .col.text-box {
 }
 
 /**********
+  ABOUT US
+**********/
+
+.about-us .row {
+  padding: 0 1rem;
+}
+
+
+.about-us .col.text-box,
+.about-us .col.img-box {
+  width: 100%;
+}
+
+/**********
+  GET STARTED
+**********/
+
+.get-started .col {
+  gap: 10px;
+}
+
+
+/**********
   RESPONSIVENESS
 **********/
 
@@ -145,7 +173,7 @@ main .presentation .row > .col:first-child .col.text-box {
   
   main .presentation .row > .col:first-child {
     flex-basis: 66%;
-    /* flex-grow: 1; */
+    flex-grow: 1;
   }
 
   main .testimonials .card {
@@ -160,6 +188,16 @@ main .presentation .row > .col:first-child .col.text-box {
     flex-basis: 50%;
   }
 
+  .about-us .row {
+    display: flex;
+  }
+
+  .about-us .col.text-box {
+    width: 60%;
+}
+  .about-us .col.img-box {
+    width: 40%;
+  }
 }
 
 @media screen and (min-width: 769px) {  
@@ -174,8 +212,12 @@ main .presentation .row > .col:first-child .col.text-box {
     flex-basis: 50%;
   }
 
+  .container {
+    max-width: 1400px;
+  }
+
   .planning .container {
-    max-width: 85%;
+    width: 85%;
   }
 
   
