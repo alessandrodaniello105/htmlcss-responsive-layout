@@ -40,7 +40,6 @@ a:visited {
   color: black;
   padding: 5px 7px;
   border-radius: 15px;
-
 }
 
 
@@ -185,8 +184,26 @@ footer .container {
 
 .planning .row .col:last-child .card {
   background-color: white;
+  border-radius: 50px;
 
 }
+
+
+/**********
+  TESTIMONIALS
+**********/
+
+.testimonials .card {
+  background-color: var(--violet);
+  border-radius: 50px;
+  margin: 40px 0;
+}
+
+.testimonials .circle {
+  width: 200px;
+  height: 200px;
+}
+
 /**********
   BENEFITS
 **********/
@@ -195,8 +212,28 @@ footer .container {
   text-align: center;
 }
 
+.benefits .card {
+  background-color: white;
+  padding: 0;
+}
+
+.benefits .card .btn a,
+.about-us .btn a {
+  color: white;
+  background-color: var(--violet);
+
+}
+
+.benefits h2,
+.benefits h3,
+.about-us h2 {
+  color: var(--violet);
+}
+
 .benefits .card .col {
   text-align: left;
+  padding: 2rem 1rem;
+  min-height: fit-content;
 }
 
 /**********
@@ -207,10 +244,16 @@ footer .container {
   padding: 0 1rem;
 }
 
-
 .about-us .col.text-box,
 .about-us .col.img-box {
   width: 100%;
+}
+
+.circle {
+  background-color: black;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
 }
 
 /**********
