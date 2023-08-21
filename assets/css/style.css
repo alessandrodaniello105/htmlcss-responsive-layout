@@ -96,7 +96,7 @@ header {
 }
 
 header .col {
-  padding: 40px 0;
+  padding: 40px 10px;
 }
 
 .col.list {
@@ -124,7 +124,7 @@ main {
 
 /* da togliere */
 section:nth-child(even) {
-  background-color: blue; 
+  background-color: var(--violet); 
 }
 
 
@@ -141,15 +141,18 @@ main .row > .col {
 .card {
   height: 100%;
   padding: 10px;
-  background-color: white;
-  border: 1px solid black;  /* da togliere */
-  border-radius: 5px;
+  border-radius: 15px;
+  margin: 0 10px;
 }
 
 .card .col {
   width: 100%;
   min-height: 200px;
   text-align: center;
+}
+
+main .presentation .card {
+  background-color: var(--cyan);
 }
 
 main .presentation .row > .col:first-child .card {
@@ -176,6 +179,14 @@ footer .container {
   text-align: center;
 }
 
+/**********
+  PLANNING
+**********/
+
+.planning .row .col:last-child .card {
+  background-color: white;
+
+}
 /**********
   BENEFITS
 **********/
