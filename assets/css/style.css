@@ -50,9 +50,16 @@ main .col {
   flex-wrap: wrap;
 }
 
+.card {
+ flex-direction: column; 
+}
+
 @media screen and (min-width: 577px) {
   main .col {
     max-width: 50%;
   }
   
+  .card {
+    flex-direction: row; 
+  }
 }
