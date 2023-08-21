@@ -8,7 +8,7 @@
 UTILITY
 **********/
 .debug {
-  width: 100%;
+  /* max-width: 100%; */
   min-height: 100px;
   background-color: rgba(255, 0, 0, 0.2);
   border: 1px solid black;
@@ -20,6 +20,10 @@ UTILITY
 
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .align-center {
@@ -38,27 +42,58 @@ header {
   width: 100%;
 }
 
+header .col {
+  padding: 40px 0;
+}
+
 /**********
 MAIN
 **********/
 
-main .col {
-  max-width: 100%;
+main .row {
+  flex-wrap: wrap;
+  /* flex-direction: column;  */
+  width: 100%;
 }
 
-.row {
-  flex-wrap: wrap;
+main .row > .col {
+  width: 100%;
+  padding: 10px 0;
 }
 
 .card {
- flex-direction: column; 
+  flex-direction: column;
+  border: 1px solid black; /* da togliere */
+  border-radius: 5px;
+  height: 100%;
+  padding: 10px;
 }
 
+.col.text-box {
+  width: 70%;
+}
+
+.col.img-box {
+  width: 30%;
+}
+
+/* 
+main .row > .col {
+  flex-basis: calc(100% / 3);
+} */
+
 @media screen and (min-width: 577px) {
-  main .col {
-    max-width: 50%;
+  main .row > .col:not(:first-child) {
+    max-width: calc(100% / 3);
   }
   
+  main .row > .col:first-child {
+    flex-basis: 66%;
+    flex-grow: 1;
+  }
+}
+
+@media screen and (min-width: 769px) {  
   .card {
     flex-direction: row; 
   }
