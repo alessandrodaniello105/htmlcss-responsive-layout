@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 /**********
   UTILITY
 **********/
@@ -61,7 +62,8 @@ header .col {
 
 .presentation,
 .planning,
-.testimonials {
+.testimonials,
+.benefits {
   padding: 50px 0;
 }
 
@@ -91,6 +93,7 @@ main .row > .col {
 }
 
 .card .col {
+  width: 100%;
   min-height: 200px;
   text-align: center;
 }
@@ -115,10 +118,21 @@ main .presentation .row > .col:first-child .col.text-box {
 /**********
   TESTIMONIALS
 **********/
-.testimonials {
+.testimonials{
   text-align: center;
 }
 
+/**********
+  BENEFITS
+**********/
+
+.benefits .container > h2 {
+  text-align: center;
+}
+
+.benefits .card .col {
+  text-align: left;
+}
 
 /**********
   RESPONSIVENESS
@@ -137,6 +151,15 @@ main .presentation .row > .col:first-child .col.text-box {
   main .testimonials .card {
     flex-direction: row;
   }
+
+  main .benefits .row {
+    flex-direction: row;
+  }
+
+  main .benefits .row > .col {
+    flex-basis: 50%;
+  }
+
 }
 
 @media screen and (min-width: 769px) {  
@@ -154,4 +177,10 @@ main .presentation .row > .col:first-child .col.text-box {
   .planning .container {
     max-width: 85%;
   }
+
+  
+  main .benefits .row > .col {
+    flex-basis: calc(100% / 3);
+  }
+
 }
