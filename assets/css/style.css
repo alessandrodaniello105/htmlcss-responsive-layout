@@ -1,3 +1,10 @@
+:root {
+  --footergrey: #333333;
+  --cyan: #B5DDFF;
+  --blue: #0084FD;
+  --violet: #9792E4;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -69,7 +76,8 @@ header .col {
 .testimonials,
 .benefits,
 .about-us,
-.get-started {
+.get-started,
+.footer {
   padding: 50px 0;
 }
 
@@ -123,7 +131,8 @@ main .testimonials .col.text-box {
 
 
 .testimonials,
-.get-started {
+.get-started,
+footer .container {
   text-align: center;
 }
 
@@ -161,6 +170,25 @@ main .testimonials .col.text-box {
   gap: 10px;
 }
 
+.get-started .container {
+  max-width: 530px;
+}
+
+/**********
+  FOOTER
+**********/
+
+footer {
+  background-color: var(--footergrey);
+}
+
+footer .container {
+  max-width: 460px;
+}
+
+footer .container .col {
+  gap: 20px;
+}
 
 /**********
   RESPONSIVENESS
