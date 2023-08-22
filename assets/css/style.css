@@ -17,6 +17,10 @@ body {
   font-family: 'PT Sans', sans-serif;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 h2.special {
   font-size: 3rem;
   color: goldenrod;
@@ -47,6 +51,27 @@ a:visited {
   padding: 5px 10px;
   border-radius: 15px;
 }
+
+.card {
+  height: 100%;
+  padding: 30px ;
+  border-radius: 15px;
+  /* margin: 0 10px; */ /* lasciare o no? */
+}
+
+/* 
+.card {
+  text-align: left;
+} */
+
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
 
 
 /**********
@@ -90,6 +115,10 @@ a:visited {
   padding: 0 20px;
 }
 
+
+
+
+
 /**********
   HEADER
 **********/
@@ -111,10 +140,6 @@ header .col {
 
 header .burger {
   font-size: 2rem;
-}
-
-.card {
-  text-align: left;
 }
 
 /**********
@@ -147,12 +172,6 @@ main .row > .col {
   padding: 10px 0;
 } */
 
-.card {
-  height: 100%;
-  padding: 30px ;
-  border-radius: 15px;
-  margin: 0 10px;
-}
 
 main .col {
   width: 100%;
@@ -195,11 +214,16 @@ main .presentation .row > .col:first-child .text-box {
 
 .presentation .text-box h2 {
   color: var(--blue);
+  padding-bottom: 40px;
+}
+
+p {
+  line-height: 25px;
+  
 }
 
 .presentation .text-box p {
   padding-bottom: 35px;
-  line-height: 25px;
   color: var(--fontgrey);
   font-weight: bold;
 }
@@ -240,6 +264,52 @@ main .presentation .row > .col:first-child .text-box {
 }
 
 /**********
+  PLANNING
+**********/
+
+.planning .container .row {
+  padding: 0 10px;
+}
+
+.planning .container .row .col {
+  text-align: left;
+}
+
+.planning .container .row .col:first-child {
+  color: white;
+}
+
+.planning .container .row .col:first-child h1 {
+  padding: 50px 0;
+}
+
+.planning .container .row .col:first-child p {
+  padding-bottom: 30px;
+}
+
+.planning .container .row .col .img-box {
+  padding: 20px 0;
+}
+
+.planning .container .row .col:last-child .card {
+  background-color: white;
+  border-radius: 50px;
+  text-align: center;
+  padding: 0;
+}
+
+.planning .container .row .col:last-child .card p {
+  font-style: italic;
+}
+
+.planning .btn.special a {
+  background-color: #9792E4;
+  padding: 13px 17px;
+  border-radius: 30px;
+  margin: 30px 0;
+}
+
+/**********
   TESTIMONIALS
 **********/
 
@@ -252,26 +322,11 @@ main .testimonials .text-box {
   flex-grow: 1;
 }
 
-
 .testimonials,
 .get-started,
 footer .container {
   text-align: center;
 }
-
-/**********
-  PLANNING
-**********/
-
-.planning .row .col:last-child .card {
-  background-color: white;
-  border-radius: 50px;
-}
-
-
-/**********
-  TESTIMONIALS
-**********/
 
 .testimonials > .container > .row {
   padding: 0 10px;
