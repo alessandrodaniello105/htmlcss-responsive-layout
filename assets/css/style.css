@@ -11,6 +11,11 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'PT Sans', sans-serif;
+}
+
 h2.special {
   font-size: 3rem;
   color: goldenrod;
@@ -102,6 +107,10 @@ header .col {
   display: none;
 }
 
+header .burger {
+  font-size: 2rem;
+}
+
 /**********
   MAIN
 **********/
@@ -140,7 +149,7 @@ main .row > .col {
 
 main .col {
   width: 100%;
-  min-height: 200px;
+  min-height: 200px; /* da togliere */
   text-align: center;
 }
 
@@ -152,7 +161,7 @@ main .presentation .row > .col:first-child .card {
   flex-direction: column;
 }
 
-main .presentation .row > .col:first-child .col.text-box {
+main .presentation .row > .col:first-child .text-box {
   width: 70%;
 }
 
@@ -230,7 +239,7 @@ footer .container {
 .benefits .card {
   text-align: left;
   padding: 2rem 1rem;
-  min-height: fit-content;
+  min-height: fit-content; /* da togliere */
 }
 
 /**********
@@ -240,10 +249,14 @@ footer .container {
 .about-us .row {
   padding: 0 10px;
 }
-
+/* 
 .about-us .col.text-box,
 .about-us .col.img-box {
   width: 100%;
+} */
+
+.about-us .col.img-box {
+  width: 250px;
 }
 
 .circle {
@@ -312,11 +325,12 @@ footer .container .col {
   }
 
   .about-us .col.text-box {
-    width: 60%;
+    width: calc(100% - 250px);
 }
+/* 
   .about-us .col.img-box {
     width: 40%;
-  }
+  } */
 }
 
 @media screen and (min-width: 769px) { 
