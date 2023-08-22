@@ -587,6 +587,12 @@ footer .container .col {
     flex-direction: row;
   }
 
+
+  .testimonials .card .text-box {
+    text-align: left;
+    padding: 0 40px;
+  }
+  
   main .benefits .row {
     flex-direction: row;
   }
