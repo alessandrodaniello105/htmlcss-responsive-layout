@@ -64,11 +64,11 @@ a:visited {
   text-align: left;
 } */
 
-
+/* 
 img {
   width: 100%;
   object-fit: cover;
-}
+} */
 
 
 
@@ -111,12 +111,14 @@ img {
 
 .container {
   width: 100%;
+  padding: 0 30px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 
-
+.container > .row > .col {
+  padding: 10px;
+}
 
 
 /**********
@@ -405,31 +407,59 @@ footer .container {
   BENEFITS
 **********/
 
-.benefits .container > h2 {
+.benefits .container > h1 {
   text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.benefits .container .card h1 {
+  font-size: 3rem;
+}
+
+.benefits h2 {
+  margin: 30px 0;
+}
+
+.benefits p {
+  line-height: 30px;
+  color: var(--fontgrey);
+  margin-bottom: 30px;
 }
 
 .benefits .card {
   background-color: white;
-  padding: 0;
+  margin: 15px 0;
+  text-align: left;
+  padding: 2rem 30px;
+  /* padding-bottom: 0px; */
+  min-height: fit-content; /* da togliere */
 }
 
 .benefits .card .btn a,
 .about-us .btn a {
+  font-weight: bold;
   color: white;
   background-color: var(--violet);
+  letter-spacing: .1rem;
+  padding: 10px 50px;
+  border-radius: 20px;
 }
 
+.benefits h1,
 .benefits h2,
-.benefits h3,
 .about-us h2 {
   color: var(--violet);
 }
 
-.benefits .card {
-  text-align: left;
-  padding: 2rem 1rem;
-  min-height: fit-content; /* da togliere */
+
+main .benefits .row > .col {
+  flex-basis: 100%;
+  height: 100%;
+}
+
+main .benefits .row > .col .card {
+  height: 100%;
 }
 
 /**********
