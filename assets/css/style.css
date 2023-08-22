@@ -3,6 +3,7 @@
   --cyan: #B5DDFF;
   --blue: #0084FD;
   --violet: #9792E4;
+  --fontgrey: #5A6E7F;
 }
 
 * {
@@ -43,7 +44,7 @@ a:visited {
   display: inline-block;
   background-color: white;
   color: black;
-  padding: 5px 7px;
+  padding: 5px 10px;
   border-radius: 15px;
 }
 
@@ -100,7 +101,7 @@ header {
 }
 
 header .col {
-  padding: 40px 10px;
+  padding: 20px 10px;
 }
 
 .col.list {
@@ -109,6 +110,10 @@ header .col {
 
 header .burger {
   font-size: 2rem;
+}
+
+.card {
+  text-align: left;
 }
 
 /**********
@@ -134,15 +139,15 @@ main .row {
   flex-wrap: wrap;
   width: 100%;
 }
-
+/* 
 main .row > .col {
   width: 100%;
   padding: 10px 0;
-}
+} */
 
 .card {
   height: 100%;
-  padding: 10px;
+  /* padding: 10px; */
   border-radius: 15px;
   margin: 0 10px;
 }
@@ -153,17 +158,67 @@ main .col {
   text-align: center;
 }
 
+
+/**********
+  PRESENTATION
+**********/
+
 main .presentation .card {
   background-color: var(--cyan);
 }
 
-main .presentation .row > .col:first-child .card {
-  flex-direction: column;
-}
 
 main .presentation .row > .col:first-child .text-box {
-  width: 70%;
+  width: 100%;
 }
+
+.presentation .text-box {
+  padding: 20px;
+}
+
+.presentation .text-box h3,
+.presentation .text-box p {
+  padding-bottom: 25px;
+}
+
+.presentation .text-box h3 {
+  color: var(--blue);
+}
+
+.presentation .text-box p {
+  line-height: 25px;
+  color: var(--fontgrey);
+  font-weight: bold;
+}
+
+.presentation .text-box .btn {
+  padding-bottom: 20px;
+}
+
+.presentation .text-box .btn a {
+  background-color: #0084FD;
+  color: white;
+  font-weight: bold;
+  padding: 10px 50px;
+  border-radius: 20px;
+}
+ 
+.presentation .img-box {
+  /* position: relative;
+  bottom: -5px; */
+  height: 275px;
+}
+
+.presentation .img-box img {
+  height: 100%;
+
+  /* height: 100%; */
+  /* object-fit: cover; */
+}
+
+/**********
+  TESTIMONIALS
+**********/
 
 main .testimonials .img-box {
   width: 200px;
@@ -298,15 +353,25 @@ footer .container .col {
   RESPONSIVENESS
 **********/
 
-@media screen and (min-width: 577px) {
-  main .presentation .row > .col:not(:first-child) {
+@media screen and (min-width: 769px) {
+  main .presentation .container > .row > .col:not(:first-child) {
     max-width: calc(100% / 3);
   }
   
-  main .presentation .row > .col:first-child {
+  main .presentation > .container > .row > .col:first-child {
     flex-basis: 66%;
     flex-grow: 1;
   }
+
+  main .presentation .card .row .text-box {
+    width: 50%;
+  }
+
+/* 
+  main .presentation .card .img-box {
+    left: 20px;
+    transform: translate(-50%, 0);
+  } */
 
   main .testimonials .card {
     flex-direction: row;
@@ -333,17 +398,32 @@ footer .container .col {
   } */
 }
 
-@media screen and (min-width: 769px) { 
+@media screen and (min-width: 993px) { 
   
   header nav.burger {
     display: none;
   }
 
+  main .presentation .card .row {
+    flex-wrap: nowrap;
+  }
   .col.list {
     display: block;
   }
   
-  main .presentation .row > .col:first-child .card,
+  main .presentation > .container > .row > .col:first-child .text-box {
+    /* width: calc(100% - 250px); */
+    flex-grow: 1;
+  }
+
+  main .presentation > .container > .row > .col:first-child .img-box {
+    flex-basis: 250px;
+  }
+
+  main .presentation .card .row {
+    flex-direction: row;
+  }
+
   main .planning .row,
   .testimonials .card {
     flex-direction: row; 
